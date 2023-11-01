@@ -52,35 +52,36 @@ function App() {
           Get Photos
         </button>
       </div>
+
       <div className="button-container">
         <button
           onClick={() => {
-            setInput("Mountain");
-            return renderPhoto();
+            setInput("");
+            return renderPhoto("mountain");
           }}
         >
           Mountain
         </button>
         <button
           onClick={() => {
-            setInput("beach");
-            return renderPhoto();
+            setInput("");
+            return renderPhoto("beach");
           }}
         >
           Beaches
         </button>
         <button
           onClick={() => {
-            setInput("bird");
-            return renderPhoto();
+            setInput("");
+            return renderPhoto("bird");
           }}
         >
           Birds
         </button>
         <button
           onClick={() => {
-            setInput("food");
-            return renderPhoto();
+            setInput("");
+            return renderPhoto("food");
           }}
         >
           Food
