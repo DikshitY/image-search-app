@@ -7,6 +7,7 @@ function App() {
   const [data, setData] = React.useState([]);
 
   const renderPhoto = (name) => {
+    event.preventDefault()
     if (input) {
       axios
         .get(
@@ -42,15 +43,17 @@ function App() {
     <div className="main-container">
       <h1 className="main-title">Image Search</h1>
       <div className="main-input">
-        <input
-          type="text"
-          placeholder="Search..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button className="search-btn" onClick={renderPhoto}>
-          Get Photos
-        </button>
+        <form onSubmit={renderPhoto} className="main-input">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button className="search-btn" onClick={renderPhoto}>
+            Get Photos
+          </button>
+        </form>
       </div>
 
       <div className="button-container">
